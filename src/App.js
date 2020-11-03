@@ -41,11 +41,12 @@ const App = () => {
         - if the `id` of the post matches `postId`, return a new post object with the desired values (use the spread operator).
         - otherwise just return the post object unchanged.
      */
-    setPosts(
-      posts.map(item => {
-        return item.id ? { ...item } : item;
-      })
-    );
+    console.log(postId);
+    // setPosts(
+    //   posts.map(item => {
+    //     return item.id  ? { ...item } : item;
+    //   })
+    // );
   };
 
   return (
@@ -57,7 +58,7 @@ const App = () => {
         circle={faCircle}
         compass={faCompass}
       />
-      <Posts likePosts={likePost} post={posts} />
+      <Posts likePost={likePost} post={posts} />
       {/* Check the implementation of each component, to see what props they require, if any! */}
     </div>
   );
