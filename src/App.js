@@ -42,11 +42,11 @@ const App = () => {
         - otherwise just return the post object unchanged.
      */
     console.log(postId);
-    // setPosts(
-    //   posts.map(item => {
-    //     return item.id  ? { ...item } : item;
-    //   })
-    // );
+    setPosts(
+      posts.map(item => {
+        return item.id === postId ? { ...item, likes: item.likes + 1 } : item;
+      })
+    );
   };
 
   return (
